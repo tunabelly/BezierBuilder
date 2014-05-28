@@ -20,8 +20,6 @@
 @interface BezierView : NSView {
 	NSMutableArray *bezierPoints;
 	NSPoint editingPoint;
-	
-	IBOutlet id<BezierViewDelegate> delegate;
 }
 
 @property (nonatomic, assign) id<BezierViewDelegate> delegate;

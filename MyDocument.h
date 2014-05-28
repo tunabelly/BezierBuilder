@@ -14,8 +14,6 @@
 	BezierView * bezierView;
 	NSTextView * bezierCodeView;
 	NSPopUpButton *codeOption;
-	NSSegmentedControl *originControl;
-	NSSegmentedControl *codeStyleControl;
 }
 
 @property (nonatomic, retain) IBOutlet BezierView * bezierView;

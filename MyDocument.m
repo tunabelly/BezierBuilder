@@ -39,7 +39,6 @@
 		[builder setYOrigin:0.0];
 	}
 	[bezierCodeView setString:[builder codeForBezierPoints]];
-	[builder release];
 }
 
 - (void) codeOptionChanged:(id)sender {

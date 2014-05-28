@@ -197,7 +197,6 @@ NSPoint NSScaledPoint(NSPoint point, float scale) {
 		[newPoint setControlPoint1:control1];
 		[newPoint setControlPoint2:control2];
 		[bezierPoints addObject:newPoint];
-		[newPoint release];
 		
 		[[self delegate] elementsDidChangeInBezierView:self];
 		
@@ -260,18 +259,12 @@ NSPoint NSScaledPoint(NSPoint point, float scale) {
 		[extra appendBezierPathWithOvalInRect:r];
 	}
 	[extra stroke];
-	[extra release];
 	
 	[[NSColor blackColor] set];
 	NSBezierPathCodeBuilder *builder = [[NSBezierPathCodeBuilder alloc] init];
 	[builder setBezierPoints:bezierPoints];
 	NSBezierPath * path = [builder objectForBezierPoints];
 	[path stroke];
-}
-
-- (void) dealloc {
-	[bezierPoints release];
-	[super dealloc];
 }
 
 @end
